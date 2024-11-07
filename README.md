@@ -55,21 +55,50 @@ In addition to traditional computer vision techniques, three deep learning model
 
 The deep learning models are evaluated on various performance metrics, including accuracy and confusion matrices, to highlight strengths and potential improvements over traditional feature-based methods.
 ## Running the Project on Google Colab
-To run this project on Google Colab:
-1. **Upload the `cancer_detection.ipynb` notebook** to Google Colab.
-2. **Set up the dataset**:
-   - Upload the dataset to your Google Drive.
-   - Mount Google Drive in the Colab notebook:
+
+To run this project on Google Colab, follow these steps:
+
+1. **Open the `cancer_detection.ipynb` Notebook**:
+   - Upload the `cancer_detection.ipynb` notebook to Google Colab or open it directly if it's hosted on GitHub.
+
+2. **Set Up the Dataset**:
+   - Download the dataset from Kaggle if it’s not already in Google Drive.
+   - Upload the dataset to Google Drive or use Kaggle’s API to download it directly in Colab. To use Kaggle’s API:
+     - First, upload your Kaggle API token (`kaggle.json`) to Colab.
+     - Run the following code to install and authenticate Kaggle:
+       ```python
+       from google.colab import files
+       files.upload()  # Upload kaggle.json
+
+       ! mkdir -p ~/.kaggle
+       ! cp kaggle.json ~/.kaggle/
+       ! chmod 600 ~/.kaggle/kaggle.json
+       ```
+     - Download the dataset with:
+       ```python
+       ! kaggle datasets download -d prahladmehandiratta/cervical-cancer-largest-dataset-sipakmed
+       ```
+   - Alternatively, **mount Google Drive** and access the dataset stored there:
      ```python
      from google.colab import drive
      drive.mount('/content/drive')
      ```
-   - Update the dataset path in the notebook to match the location in your Google Drive.
-3. **Run each cell**:
+
+3. **Install Project Dependencies**:
+   - Run the following code in Colab to install all dependencies listed in `requirements.txt`:
+     ```python
+     !pip install -r requirements.txt
+     ```
+   - This will install packages for image processing, machine learning, deep learning, and other utilities required for the notebook.
+
+4. **Run Each Cell in the Notebook**:
    - The notebook is organized with sections for image preprocessing, feature extraction, machine learning, and deep learning models.
-   - Follow the notebook instructions to apply feature extraction techniques and train both ML and DL models.
-4. **View Results**:
-   - The notebook includes visualizations of feature extractions (first five images for each technique).
-   - It prints the classification accuracy for each model, along with confusion matrices for deep learning models.
+   - Follow the instructions within each cell to apply feature extraction techniques and train both ML and DL models.
+
+5. **View Results**:
+   - The notebook includes visualizations of feature extraction techniques (showing the first five images for each).
+   - It will also display classification accuracy and confusion matrices for each model, allowing for a detailed performance comparison.
+
+By following these steps, you’ll be able to set up and run the entire project on Google Colab with minimal hassle.
 
 
