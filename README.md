@@ -12,14 +12,16 @@ This project explores the automated detection of cervical cancer cells in Pap sm
 - [Running the Project on Google Colab](#running-the-project-on-google-colab)
 
 ## Dataset
-The dataset used is **SIPaKMeD**, containing five distinct categories:
+The dataset used in this project is **SIPaKMeD**, which is available on Kaggle: [Cervical Cancer Largest Dataset - SIPaKMeD](https://www.kaggle.com/datasets/prahladmehandiratta/cervical-cancer-largest-dataset-sipakmed).
+
+The dataset contains five distinct categories of cervical cell images:
 1. **Dyskeratotic Cells**
 2. **Koilocytotic Cells**
 3. **Metaplastic Cells**
 4. **Parabasal Cells**
 5. **Superficial-Intermediate Cells**
 
-Each category has images of Pap smear cells to train and validate the detection model. The images are organized into folders by category and preprocessed with **Otsu’s thresholding** and **watershed segmentation**.
+Each category has images of Pap smear cells to train and validate the detection model. These images are organized into folders by category and are preprocessed with **Otsu’s thresholding** and **watershed segmentation** to enhance detection accuracy.
 
 ## Technologies Used
 - **Python**: Core programming language.
