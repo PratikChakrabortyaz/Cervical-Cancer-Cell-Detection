@@ -1,0 +1,25 @@
+# Core scientific libraries
+numpy
+pandas
+matplotlib
+seaborn
+
+# Image processing and feature extraction
+opencv-python
+Pillow
+scikit-image
+
+# Machine learning
+scikit-learn
+
+# Deep learning with TensorFlow and PyTorch
+tensorflow
+torch
+torchvision
+fvcore
+
+# Progress bar
+tqdm
+
+# Kaggle API for downloading datasets
+kaggle
